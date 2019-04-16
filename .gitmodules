@@ -16,3 +16,6 @@
 [submodule "choerodon-front-issue"]
 	path = choerodon-front-issue
 	url =../../choerodon-agile/choerodon-front-issue
+[submodule "choerodon-front-apim"]
+	path = choerodon-front-apim
+	url = ../../choerodon-c7napim/choerodon-front-apim

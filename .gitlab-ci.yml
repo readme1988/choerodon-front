@@ -39,8 +39,8 @@ docker-build:
     mkdir -p /cache/$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA/
     mkdir -p ./tmp/
     cp -r ./node_modules/choerodon-front-boot/structure ./tmp/structure
-    modules=(iam devops agile testManager wiki issue)
-    folers=(choerodon-front-iam choerodon-front-devops choerodon-front-agile choerodon-front-test-manager choerodon-front-wiki choerodon-front-issue)
+    modules=(iam devops agile testManager wiki issue apim)
+    folers=(choerodon-front-iam choerodon-front-devops choerodon-front-agile choerodon-front-test-manager choerodon-front-wiki choerodon-front-issue choerodon-front-apim)
     for i in "${!modules[@]}"; 
     do 
       mkdir -p ./tmp/${modules[$i]}/src/app/${modules[$i]}/
