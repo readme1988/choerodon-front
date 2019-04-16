@@ -57,7 +57,7 @@ docker-build:
 
   function node_build() {
     chmod -R 777 node_modules
-    modules=(choerodon-front-iam/iam choerodon-front-devops/devops choerodon-front-agile/agile choerodon-front-test-manager/testManager choerodon-front-wiki/wiki choerodon-front-issue/issue)
+    modules=(choerodon-front-iam/iam choerodon-front-devops/devops choerodon-front-agile/agile choerodon-front-test-manager/testManager choerodon-front-wiki/wiki choerodon-front-issue/issue choerodon-front-apim/apim)
     npm run ${1:-"build"} ${modules[@]} -registry https://nexus.choerodon.com.cn/repository/choerodon-npm/
     find dist -name '*.js' | xargs sed -i "s/localhost:version/$CI_COMMIT_TAG/g"
   }
