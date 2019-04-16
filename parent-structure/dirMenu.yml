@@ -18,7 +18,7 @@
     level: 'project',
     parent: 'choerodon.code.program',
     type: 'dir',
-    sort: 0,
+    sort: 10,
     icon: 'settings',
     subMenu: 
      [ 'choerodon.code.program.art',
