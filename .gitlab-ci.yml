@@ -1,4 +1,4 @@
-image: registry.cn-hangzhou.aliyuncs.com/choerodon-tools/cibase:0.8.1
+image: registry.cn-hangzhou.aliyuncs.com/choerodon-tools/cifront:0.7.0
 
 stages:
   - package
@@ -19,6 +19,7 @@ node-build:
 
 docker-build:
   stage: build
+  image: registry.cn-hangzhou.aliyuncs.com/choerodon-tools/cibase:0.7.0
   script:
     - docker_build
     - rm -rf /cache/${CI_PROJECT_NAME}-${CI_PROJECT_ID}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}
@@ -33,21 +34,13 @@ docker-build:
   fi
   source .auto_devops.sh
 
-  function echo_time(){
-    while true
-    do
-        sleep 30
-        date "+%Y-%m-%d %H:%M:%S"
-    done
-  }
-
   function node_module_ci() {
     npm i --registry https://nexus.choerodon.com.cn/repository/choerodon-npm/ --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
     mkdir -p /cache/$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA/
     mkdir -p ./tmp/
     cp -r ./node_modules/choerodon-front-boot/structure ./tmp/structure
-    modules=(iam devops agile testManager wiki issue)
-    folers=(choerodon-front-iam choerodon-front-devops choerodon-front-agile choerodon-front-test-manager choerodon-front-wiki choerodon-front-issue)
+    modules=(iam devops agile testManager wiki issue apim)
+    folers=(choerodon-front-iam choerodon-front-devops choerodon-front-agile choerodon-front-test-manager choerodon-front-wiki choerodon-front-issue choerodon-front-apim)
     for i in "${!modules[@]}"; 
     do 
       mkdir -p ./tmp/${modules[$i]}/src/app/${modules[$i]}/
@@ -63,17 +56,16 @@ docker-build:
   }
 
   function node_build() {
-    echo_time &
     chmod -R 777 node_modules
-    modules=(choerodon-front-iam/iam choerodon-front-devops/devops choerodon-front-agile/agile choerodon-front-test-manager/testManager choerodon-front-wiki/wiki choerodon-front-issue/issue)
+    modules=(choerodon-front-iam/iam choerodon-front-devops/devops choerodon-front-agile/agile choerodon-front-test-manager/testManager choerodon-front-wiki/wiki choerodon-front-issue/issue choerodon-front-apim/apim)
     npm run ${1:-"build"} ${modules[@]} -registry https://nexus.choerodon.com.cn/repository/choerodon-npm/
     find dist -name '*.js' | xargs sed -i "s/localhost:version/$CI_COMMIT_TAG/g"
-    ps -ex | grep sleep | grep -v grep | awk '{print $1}' | xargs kill -9
   }
 
   function docker_build(){
     cp -r /cache/${CI_PROJECT_NAME}-${CI_PROJECT_ID}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}/* ${1:-"."}
-    kaniko -c $PWD -f $PWD/Dockerfile -d ${DOCKER_REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}:${CI_COMMIT_TAG}
+    docker build --pull -t ${DOCKER_REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}:${CI_COMMIT_TAG} ${1:-"."}
+    docker push ${DOCKER_REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}:${CI_COMMIT_TAG}
   }
 
 before_script:
