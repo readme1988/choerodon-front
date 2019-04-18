@@ -1,27 +1,27 @@
 image: registry.cn-hangzhou.aliyuncs.com/choerodon-tools/cibase:0.8.1
 
 stages:
-  - package
   - build
+  - release
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-node-build:
-  stage: package
+build:
+  stage: build
   script:
     - node_module_ci
     - node_build build
-    - cp -r dist /cache/${CI_PROJECT_NAME}-${CI_PROJECT_ID}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}/dist
-    - cp -r node_modules/choerodon-front-boot/structure /cache/${CI_PROJECT_NAME}-${CI_PROJECT_ID}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}/structure
-    - cp -r parent-structure /cache/${CI_PROJECT_NAME}-${CI_PROJECT_ID}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}/parent-structure
+    - cp -r Dockerfile $CI_PROJECT_DIR/docker
+    - cp -r dist $CI_PROJECT_DIR/docker/dist
+    - cp -r node_modules/choerodon-front-boot/structure $CI_PROJECT_DIR/docker/structure
+    - cp -r parent-structure $CI_PROJECT_DIR/docker/parent-structure
+    - cd $CI_PROJECT_DIR
+    - kaniko -c $CI_PROJECT_DIR/docker -f $CI_PROJECT_DIR/docker/Dockerfile -d ${DOCKER_REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}:${CI_COMMIT_TAG}
 
-
-docker-build:
-  stage: build
+release
+  stage: release
   script:
-    - docker_build
-    - rm -rf /cache/${CI_PROJECT_NAME}-${CI_PROJECT_ID}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}
     - chart_build
 
 
@@ -43,7 +43,7 @@ docker-build:
 
   function node_module_ci() {
     npm i --registry https://nexus.choerodon.com.cn/repository/choerodon-npm/ --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
-    mkdir -p /cache/$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA/
+    mkdir -p $CI_PROJECT_DIR/docker
     mkdir -p ./tmp/
     cp -r ./node_modules/choerodon-front-boot/structure ./tmp/structure
     modules=(iam devops agile testManager wiki issue apim)
@@ -56,8 +56,8 @@ docker-build:
     cd ./tmp
     python ./structure/menu/__init__.py -o yml -m ${modules[@]}
     python ./structure/dashboard/__init__.py -o yml -m iam devops agile testManager wiki
-    cp -r menu.yml /cache/$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA/
-    cp -r dashboard.yml /cache/$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA/
+    cp -r menu.yml $CI_PROJECT_DIR/docker
+    cp -r dashboard.yml $CI_PROJECT_DIR/docker
     rm -rf ./tmp
     cd ..
   }
@@ -72,8 +72,7 @@ docker-build:
   }
 
   function docker_build(){
-    cp -r /cache/${CI_PROJECT_NAME}-${CI_PROJECT_ID}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}/* ${1:-"."}
-    kaniko -c $PWD -f $PWD/Dockerfile -d ${DOCKER_REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}:${CI_COMMIT_TAG}
+    kaniko -c $CI_PROJECT_DIR -f $CI_PROJECT_DIR/docker/Dockerfile -d ${DOCKER_REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}:${CI_COMMIT_TAG}
   }
 
 before_script:
