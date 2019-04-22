@@ -65,6 +65,7 @@ release:
     echo_time &
     npm run ${1:-"build"} ${modules[@]} -registry https://nexus.choerodon.com.cn/repository/choerodon-npm/  --sass-binary-site=http://npm.taobao.org/mirrors/node-sass --loglevel verbose
     find dist -name '*.js' | xargs sed -i "s/localhost:version/$CI_COMMIT_TAG/g"
+    ps -ex | grep sleep | grep -v grep | awk '{print $1}' | xargs kill -9
   }
 
   function cp_file(){
