@@ -74,7 +74,7 @@
     level: 'project',
     parent: 'choerodon.code.deployment-pipeline',
     type: 'dir',
-    sort: 6,
+    sort: 20,
     icon: 'database',
     subMenu: 
      [ 'choerodon.code.deployment-pipeline.service',
@@ -87,8 +87,20 @@
     level: 'project',
     parent: 'choerodon.code.deployment-pipeline',
     type: 'dir',
-    sort: 7,
+    sort: 21,
     icon: 'tune',
     subMenu: 
      [ 'choerodon.code.deployment-pipeline.config-map',
-       'choerodon.code.deployment-pipeline.secret' ] } ]
+       'choerodon.code.deployment-pipeline.secret' ] },
+  { code: 'choerodon.code.deployment-pipeline.pipeline',
+    name: '流水线',
+    enName: 'Pipeline',
+    level: 'project',
+    parent: 'choerodon.code.deployment-pipeline',
+    type: 'dir',
+    sort: 2,
+    icon: 'linear_scale',
+    subMenu: 
+     [ 'choerodon.code.deployment-pipeline.pipeline-management',
+       'choerodon.code.deployment-pipeline.pipeline-record',
+       'choerodon.code.deployment-pipeline.deployment-config' ] } ]
