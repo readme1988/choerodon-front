@@ -98,7 +98,7 @@
     level: 'project',
     parent: 'choerodon.code.deployment-pipeline',
     type: 'dir',
-    sort: 2,
+    sort: 19,
     icon: 'linear_scale',
     subMenu: 
      [ 'choerodon.code.deployment-pipeline.pipeline-management',
