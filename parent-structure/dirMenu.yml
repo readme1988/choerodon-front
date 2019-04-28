@@ -11,7 +11,7 @@
        'choerodon.code.agile.messageNotification',
        'choerodon.code.agile.component',
        'choerodon.code.agile.fastsearch',
-       'choerodon.code.issuelink' ] },
+       'choerodon.code.agile.issuelink' ] },
   { code: 'choerodon.code.agile-program.setting',
     name: '设置',
     enName: 'Program Setting',
