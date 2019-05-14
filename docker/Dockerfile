@@ -13,16 +13,12 @@ ENV PRO_DEVOPS_HOST devops.choerodon.example.com
 ENV PRO_AGILE_HOST devops.choerodon.example.com
 
 RUN echo "Asia/shanghai" > /etc/timezone;
-ADD dist /usr/share/nginx/html
-COPY parent-structure/parent-enterpoint.sh /usr/share/nginx/html
-COPY parent-structure/dirMenu.yml /usr/share/nginx/html
-COPY menu.yml /usr/share/nginx/html/menu.yml
-COPY dashboard.yml /usr/share/nginx/html/dashboard.yml
-COPY structure/menu /usr/share/nginx/html/menu
-COPY structure/dashboard /usr/share/nginx/html/dashboard
+ADD lib/dist /usr/share/nginx/html
+COPY enterpoint.sh /usr/share/nginx/html
 
-RUN chmod 777 /usr/share/nginx/html/parent-enterpoint.sh
-ENTRYPOINT ["/usr/share/nginx/html/parent-enterpoint.sh"]
+RUN chmod 777 /usr/share/nginx/html/enterpoint.sh
+ENTRYPOINT ["/usr/share/nginx/html/enterpoint.sh"]
+
 CMD ["nginx", "-g", "daemon off;"]
 
 EXPOSE 80

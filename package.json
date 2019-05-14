@@ -1,18 +1,29 @@
 {
-  "name": "choerodon-front",
+  "name": "@choerodon/choerodon-front",
+  "routeName": "c7n",
   "version": "0.16.0",
-  "description": "Choerodon font",
-  "main": "",
+  "description": "Choerodon Framework Front",
   "scripts": {
-    "start": "choerodon-front-boot start --config ./config.js",
-    "build": "choerodon-front-boot build --config ./config.js",
-    "linux_build": "node --max_old_space_size=2048 node_modules/choerodon-front-boot/bin/choerodon-front-boot-build --config ./config.js"
+    "start": "node --max_old_space_size=4096 node_modules/@choerodon/boot/bin/choerodon-front-boot start --config ./react/config.js",
+    "dist": "choerodon-front-boot dist --config ./react/config.js",
+    "clean": "rm -rf ./src"
   },
   "contributors": [
     "choerodon"
   ],
   "license": "ISC",
   "dependencies": {
-    "choerodon-front-boot": "0.10.10"
+    "@choerodon/boot": "0.1.x",
+    "@choerodon/master": "0.1.x",
+    "@choerodon/iam": "0.1.x",
+    "@choerodon/asgard": "0.1.x",
+    "@choerodon/notify": "0.1.x",
+    "@choerodon/manager": "0.1.x",
+    "@choerodon/agile": "0.1.x",
+    "@choerodon/issue": "0.1.x",
+    "@choerodon/testManager": "0.1.x",
+    "@choerodon/wiki": "0.1.x",
+    "@choerodon/devops": "0.1.x",
+    "@choerodon/apim": "0.1.x"
   }
 }
