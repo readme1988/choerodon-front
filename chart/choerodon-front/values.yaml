@@ -21,8 +21,6 @@ env:
     PRO_AGILE_HOST: devops.choerodon.example.com
     PRO_CLIENT_ID: choerodon
     PRO_LOCAL: true
-    PRO_TITLE_NAME: Choerodon
-    PRO_HEADER_TITLE_NAME: Choerodon
     PRO_COOKIE_SERVER: choerodon.example.com
     PRO_HTTP: http
     PRO_FILE_SERVER: http://minio.example.com
