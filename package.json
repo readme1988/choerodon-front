@@ -4,7 +4,7 @@
   "version": "0.16.0",
   "description": "Choerodon Framework Front",
   "scripts": {
-    "start": "node --max_old_space_size=4096 node_modules/@choerodon/boot/bin/choerodon-front-boot start --config ./react/config.js",
+    "start": "choerodon-front-boot start --config ./react/config.js",
     "dist": "choerodon-front-boot dist --config ./react/config.js",
     "clean": "rm -rf ./src"
   },
