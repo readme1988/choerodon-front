@@ -1,4 +1,9 @@
 const config = {
+    local: true, //是否为本地开发
+    theme: {
+      'primary-color': '#3F51B5',
+    },
+    cookieServer: '', 
     clientId: 'localhost', // 必须填入响应的客户端（本地开发）
     cookieServer: '', //子域名token共享
     server: 'http://api.choerodon.example.com',
