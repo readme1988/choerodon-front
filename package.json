@@ -5,7 +5,7 @@
   "description": "Choerodon Front",
   "scripts": {
     "start": "choerodon-front-boot start --config ./react/config.js",
-    "dist": "choerodon-front-boot dist --config ./react/config.js",
+    "dist": "node --max_old_space_size=4096 node_modules/@choerodon/boot/bin/choerodon-front-boot-dist --config ./react/config.js",
     "clean": "rm -rf ./src"
   },
   "contributors": [
