@@ -24,7 +24,6 @@
     "@choerodon/testManager": "0.1.x",
     "@choerodon/wiki": "0.1.x",
     "@choerodon/devops": "0.1.x",
-    "@choerodon/apim": "0.1.x",
-    "choerodon-ui": "0.5.x"
+    "@choerodon/apim": "0.1.x"
   }
 }
