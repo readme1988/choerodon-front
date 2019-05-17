@@ -11,8 +11,15 @@ image:
 logs:
   parser: nginx
 
-config:
+service:
+  enabled: false
   port: 80
+  type: ClusterIP
+  name: choerodon-front
+
+ingress:
+  enable: false
+  host: choerodon.example.com
 
 env:
   open:
@@ -24,6 +31,7 @@ env:
     PRO_HTTP: http
     PRO_FILE_SERVER: http://minio.example.com
     PRO_WEBSOCKET_SERVER: ws://ws.example.com
+    PRO_LOCAL: true
 
     
 resources: 
