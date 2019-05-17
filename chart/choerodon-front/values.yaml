@@ -18,7 +18,7 @@ service:
   name: choerodon-front
 
 ingress:
-  enable: false
+  enabled: false
   host: choerodon.example.com
 
 env:
