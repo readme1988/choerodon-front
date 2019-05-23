@@ -13,18 +13,14 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@choerodon/boot": "0.1.9",
-    "@choerodon/master": "0.1.6",
-    "@choerodon/iam": "0.1.11",
-    "@choerodon/asgard": "0.1.3",
-    "@choerodon/notify": "0.1.3",
-    "@choerodon/manager": "0.1.5",
-    "@choerodon/agile": "0.1.x",
-    "@choerodon/issue": "0.1.x",
-    "@choerodon/testManager": "0.1.x",
-    "@choerodon/wiki": "0.1.x",
-    "@choerodon/devops": "0.1.x",
-    "@choerodon/apim": "0.1.x",
-    "@choerodon/organization": "0.1.x"
+    "@choerodon/boot": "0.17.x",
+    "@choerodon/master": "0.17.x",
+    "@choerodon/iam": "0.17.x",
+    "@choerodon/asgard": "0.17.x",
+    "@choerodon/notify": "0.17.x",
+    "@choerodon/manager": "0.17.x",
+    "@choerodon/sms": "0.17.x",
+    "@choerodon/organization": "0.17.x",
+    "@choerodon/devops": "0.17.x"
   }
 }
