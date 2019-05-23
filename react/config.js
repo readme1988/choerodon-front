@@ -25,7 +25,8 @@ const config = {
         "@choerodon/testManager",
         "@choerodon/wiki",
         "@choerodon/devops",
-        "@choerodon/apim"
+        "@choerodon/apim",
+        "@choerodon/organization",
     ],
     resourcesLevel: ['site', 'organization', 'project', 'user'],
     dashboard: {
