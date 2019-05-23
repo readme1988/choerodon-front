@@ -21,6 +21,11 @@
     "@choerodon/manager": "0.17.x",
     "@choerodon/sms": "0.17.x",
     "@choerodon/organization": "0.17.x",
-    "@choerodon/devops": "0.17.x"
+    "@choerodon/devops": "0.17.x",
+    "@choerodon/knowledge": "0.17.x",
+    "@choerodon/agile": "0.17.x",
+    "@choerodon/issue": "0.17.x",
+    "@choerodon/testManager": "0.17.x",
+    "@choerodon/wiki": "0.17.x"
   }
 }
