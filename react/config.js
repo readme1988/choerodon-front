@@ -24,7 +24,7 @@ const config = {
         "@choerodon/organization",
         "@choerodon/agile",
         "@choerodon/issue",
-        "@choerodon/testManager",
+        "@choerodon/testmanager",
         "@choerodon/wiki",
         "@choerodon/knowledge",
         "@choerodon/devops",
