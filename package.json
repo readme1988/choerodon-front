@@ -25,7 +25,7 @@
     "@choerodon/knowledge": "0.17.0",
     "@choerodon/agile": "0.17.0",
     "@choerodon/issue": "0.17.0",
-    "@choerodon/testManager": "0.17.0",
+    "@choerodon/testmanager": "0.17.0",
     "@choerodon/wiki": "0.17.0"
   }
 }
