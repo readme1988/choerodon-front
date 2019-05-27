@@ -17,7 +17,7 @@
     "@choerodon/master": "0.17.1",
     "@choerodon/iam": "0.17.1",
     "@choerodon/asgard": "0.17.0",
-    "@choerodon/notify": "0.17.0",
+    "@choerodon/notify": "0.17.1",
     "@choerodon/manager": "0.17.0",
     "@choerodon/sms": "0.17.0",
     "@choerodon/organization": "0.17.1",
