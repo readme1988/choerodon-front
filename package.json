@@ -26,6 +26,7 @@
     "@choerodon/agile": "0.17.2",
     "@choerodon/issue": "0.17.0",
     "@choerodon/testmanager": "0.17.0",
-    "@choerodon/wiki": "0.17.0"
+    "@choerodon/wiki": "0.17.0",
+    "@choerodon/apim": "0.17.0"
   }
 }

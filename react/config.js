@@ -12,6 +12,7 @@ const config = {
     server: 'http://api.staging.saas.hand-china.com',
     fileServer: 'http://minio.staging.saas.hand-china.com',
     webSocketServer: 'ws://notify.staging.saas.hand-china.com',
+    apimGateway: 'http://apim.alpha.saas.hand-china.com',
     buildType: 'single',
     projectType: 'choerodon',
     master: '@choerodon/master',
@@ -28,7 +29,7 @@ const config = {
         "@choerodon/wiki",
         "@choerodon/knowledge",
         "@choerodon/devops",
-        // "@choerodon/apim",
+        "@choerodon/apim",
     ],
     resourcesLevel: ['site', 'organization', 'project', 'user'],
     dashboard: {
