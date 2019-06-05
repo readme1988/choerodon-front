@@ -5,7 +5,7 @@ const config = {
   },
   cookieServer: '',
   clientId: 'localhost', // 必须填入响应的客户端（本地开发）
-  cookieServer: 'Choerodon | 多云应用技术集成平台', //子域名token共享
+  cookieServer: '', //子域名token共享
   titlename: 'Choerodon | 多云应用技术集成平台',
   //   server: 'http://api.choerodon.example.com',
   //   fileServer: 'http://minio.choerodon.example.com',
