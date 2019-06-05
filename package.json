@@ -13,7 +13,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@choerodon/boot": "0.17.1",
+    "@choerodon/boot": "0.17.2",
     "@choerodon/master": "0.17.2",
     "@choerodon/iam": "0.17.1",
     "@choerodon/asgard": "0.17.0",
