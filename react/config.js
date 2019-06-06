@@ -51,7 +51,8 @@ const config = {
       components: './node_modules/@choerodon/iam/lib/src/app/iam/guide/*',
       locale: './node_modules/@choerodon/iam/lib/src/app/iam/locale/guide/*',
     },
-  }
+  },
+  emailBlockList: 'qq.com,gmail.com,sina.com,163.com,sina.cn'
 };
 
 module.exports = config;
