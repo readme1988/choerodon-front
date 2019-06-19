@@ -48,7 +48,7 @@ const config = {
       locale: './node_modules/@choerodon/iam/lib/src/app/iam/locale/guide/*',
     },
   },
-  emailBlackList: 'qq.com,gmail.com,sina.com,163.com,sina.cn,126.com'
+  emailBlackList: 'qq.com,gmail.com,sina.com,163.com,sina.cn,126.com,yeah.net,189.cn'
 };
 
 module.exports = config;
