@@ -1,14 +1,14 @@
 image: registry.cn-hangzhou.aliyuncs.com/choerodon-tools/cibase:0.8.1
 
 stages:
-  - npde-build
+  - node-build
   - chart-build
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-npde-build:
-  stage: npde-build
+node-build:
+  stage: node-build
   script:
     - npm run clean
     - npm i --registry https://nexus.choerodon.com.cn/repository/choerodon-npm/ --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
