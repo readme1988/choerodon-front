@@ -39,8 +39,7 @@ const config = {
       locale: './node_modules/@choerodon/iam/lib/src/app/iam/locale/dashboard/*',
     },
     agile: './node_modules/@choerodon/agile/lib/src/app/agile/dashboard/*',
-    wiki: './node_modules/@choerodon/wiki/lib/src/app/wiki/dashboard/*',
-    testManager: './node_modules/@choerodon/testManager/lib/src/app/testManager/dashboard/*',
+    wiki: './node_modules/@choerodon/wiki/lib/src/app/wiki/dashboard/*'
   },
   guide: {
     iam: {
