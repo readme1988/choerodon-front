@@ -29,6 +29,7 @@ const config = {
     "@choerodon/testmanager",
     "@choerodon/wiki",
     "@choerodon/knowledge",
+    "@choerodon/program",
     "@choerodon/devops",
     "@choerodon/apim",
   ],
