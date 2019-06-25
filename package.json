@@ -15,19 +15,19 @@
   "dependencies": {
     "@choerodon/boot": "0.18.0",
     "@choerodon/master": "0.18.0",
-    "@choerodon/iam": "0.18.1",
+    "@choerodon/iam": "0.18.2",
     "@choerodon/asgard": "0.18.0",
     "@choerodon/notify": "0.18.0",
     "@choerodon/manager": "0.18.0",
     "@choerodon/sms": "0.18.0",
     "@choerodon/organization": "0.18.1",
-    "@choerodon/devops": "0.18.0",
-    "@choerodon/knowledge": "0.18.1",
+    "@choerodon/devops": "0.18.1",
+    "@choerodon/knowledge": "0.18.0",
     "@choerodon/agile": "0.18.1",
     "@choerodon/issue": "0.18.0",
     "@choerodon/testmanager": "0.18.0",
     "@choerodon/program": "0.18.0",
     "@choerodon/wiki": "0.18.0",
-    "@choerodon/apim": "0.18.0"
+    "@choerodon/apim": "0.18.1"
   }
 }
