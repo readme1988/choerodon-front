@@ -22,11 +22,11 @@
     "@choerodon/sms": "0.18.0",
     "@choerodon/organization": "0.18.2",
     "@choerodon/devops": "0.18.3",
-    "@choerodon/knowledge": "0.18.0",
-    "@choerodon/agile": "0.18.1",
+    "@choerodon/knowledge": "0.18.2",
+    "@choerodon/agile": "0.18.2",
     "@choerodon/issue": "0.18.0",
     "@choerodon/testmanager": "0.18.0",
-    "@choerodon/program": "0.18.0",
+    "@choerodon/program": "0.18.2",
     "@choerodon/wiki": "0.18.0",
     "@choerodon/apim": "0.18.1"
   }
