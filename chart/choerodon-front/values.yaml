@@ -33,6 +33,7 @@ env:
     PRO_WEBSOCKET_SERVER: ws://ws.example.com
     PRO_LOCAL: true
     PRO_EMAIL_BLACK_LIST: qq.com,gmail.com,sina.com,163.com,sina.cn,126.com,yeah.net,189.cn,foxmail.com,msn.cn,hotmail.com,outlook.com,yahoo.com,139.com
+    PRO_CUSTOM_THEME_COLOR: undefined
 
     
 resources: 
