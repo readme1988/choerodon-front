@@ -31,7 +31,7 @@ const config = {
     // "@choerodon/wiki",
     "@choerodon/knowledge",
     // "@choerodon/program",
-    // "@choerodon/devops",
+    "@choerodon/devops",
     // "@choerodon/apim",
   ],
   resourcesLevel: ['site', 'organization', 'project', 'user'],
