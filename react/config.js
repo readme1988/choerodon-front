@@ -16,7 +16,7 @@ const config = {
   apimGateway: 'http://apim.alpha.saas.hand-china.com',
   buildType: 'single',
   projectType: 'choerodon',
-  master: './node_modules/@choerodon/c7nf-master/lib/master.js',
+  master: './node_modules/@choerodon/master/lib/master.js',
   modules: [
     '@choerodon/base',
     // '@choerodon/asgard',
