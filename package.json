@@ -18,7 +18,7 @@
     "choerodon-ui": "^0.8.3",
     "@choerodon/base": "0.20.x",
     "@choerodon/asgard": "0.18.0",
-    "@choerodon/notify": "0.18.0",
+    "@choerodon/notify": "0.20.x",
     "@choerodon/manager": "0.18.0",
     "@choerodon/sms": "0.18.0",
     "@choerodon/organization": "0.18.1",
@@ -27,8 +27,7 @@
     "@choerodon/testmanager": "0.20.0",
     "@choerodon/buzz": "0.20.0",
     "@choerodon/knowledge": "0.20.0",
-    "@choerodon/issue": "0.18.0",
-    "@choerodon/program": "0.18.2",
-    "@choerodon/apim": "0.18.1"
+    "@choerodon/apim": "0.18.1",
+    "@choerodon/market": "0.19.3"
   }
 }
