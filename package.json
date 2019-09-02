@@ -20,13 +20,11 @@
     "@choerodon/asgard": "0.18.0",
     "@choerodon/notify": "0.20.x",
     "@choerodon/manager": "0.18.0",
-    "@choerodon/sms": "0.18.0",
-    "@choerodon/organization": "0.18.1",
     "@choerodon/devops": "0.19.x",
     "@choerodon/agile": "0.19.x",
     "@choerodon/testmanager": "0.19.x",
     "@choerodon/buzz": "0.19.x",
     "@choerodon/knowledge": "0.19.x",
-    "@choerodon/market": "0.19.0"
+    "@choerodon/market": "0.19.x"
   }
 }
