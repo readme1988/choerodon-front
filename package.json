@@ -27,7 +27,6 @@
     "@choerodon/testmanager": "0.19.x",
     "@choerodon/buzz": "0.19.x",
     "@choerodon/knowledge": "0.19.x",
-    "@choerodon/apim": "0.18.1",
-    "@choerodon/market": "0.19.3"
+    "@choerodon/market": "0.19.x"
   }
 }
