@@ -33,7 +33,7 @@ node-build:
 
   function chart_build(){
     #判断chart主目录名是否与应用编码保持一致
-    CHART_DIRECTORY_PATH=`find . -maxdepth 2 -name ${PROJECT_NAME}`
+    CHART_DIRECTORY_PATH=`find . -maxdepth 3 -name ${PROJECT_NAME}`
     if [ ! -n "${CHART_DIRECTORY_PATH}" ]; then
         echo "The chart's home directory should be consistent with the application code!"
         exit 1
