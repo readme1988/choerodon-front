@@ -63,6 +63,6 @@ node-build:
         echo "upload to devops error"
         exit 1
     fi
-}
+  }
 before_script:
   - *auto_devops
