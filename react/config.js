@@ -19,7 +19,7 @@ const config = {
   master: './node_modules/@choerodon/master/lib/master.js',
   modules: [
     '@choerodon/base',
-    // '@choerodon/asgard',
+    '@choerodon/asgard',
     '@choerodon/notify',
     // '@choerodon/manager',
     "@choerodon/agile",
