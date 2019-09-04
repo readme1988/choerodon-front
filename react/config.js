@@ -14,6 +14,11 @@ const config = {
   fileServer: 'http://minio.staging.saas.hand-china.com',
   webSocketServer: 'ws://notify.staging.saas.hand-china.com',
   apimGateway: 'http://apim.alpha.saas.hand-china.com',
+  buzzWebsocketUrl: 'ws://buzz.choerodon.staging.saas.hand-china.com',
+  feedbackTokens: {
+    'agile-service': '8ddbe976-c246-11e9-9b3e-5a3542b4bc99',
+    'iam-service': '8ddbe976-c246-11e9-9b3e-5a3542b4bc99',
+  },
   buildType: 'single',
   projectType: 'choerodon',
   master: './node_modules/@choerodon/master/lib/master.js',
