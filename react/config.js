@@ -21,7 +21,7 @@ const config = {
     '@choerodon/base',
     '@choerodon/asgard',
     '@choerodon/notify',
-    // '@choerodon/manager',
+    '@choerodon/manager',
     "@choerodon/agile",
     "@choerodon/buzz",
     "@choerodon/testmanager",
