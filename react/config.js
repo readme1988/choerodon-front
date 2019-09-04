@@ -46,7 +46,7 @@ const config = {
     },
   },
   emailBlackList: 'qq.com,gmail.com,sina.com,163.com,sina.cn,126.com,yeah.net,189.cn',
-  outward: '#/knowledge/share,#/knowledge/organizations/create,#/knowledge/project/create',
+  outward: '#/knowledge/share,#/knowledge/preview,#/agile/preview',
 };
 
 module.exports = config;
