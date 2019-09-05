@@ -13,7 +13,6 @@ const config = {
   server: 'http://api.staging.saas.hand-china.com',
   fileServer: 'http://minio.staging.saas.hand-china.com',
   webSocketServer: 'ws://notify.staging.saas.hand-china.com',
-  apimGateway: 'http://apim.alpha.saas.hand-china.com',
   buildType: 'single',
   projectType: 'choerodon',
   master: './node_modules/@choerodon/master/lib/master.js',
@@ -28,23 +27,8 @@ const config = {
     "@choerodon/knowledge",
     "@choerodon/devops",
     "@choerodon/market",
-    // "@choerodon/apim",
   ],
   resourcesLevel: ['site', 'organization', 'project', 'user'],
-//   dashboard: {
-//     iam: {
-//       components: './node_modules/@choerodon/iam/lib/src/app/iam/dashboard/*',
-//       locale: './node_modules/@choerodon/iam/lib/src/app/iam/locale/dashboard/*',
-//     },
-//     agile: './node_modules/@choerodon/agile/lib/src/app/agile/dashboard/*',
-//     wiki: './node_modules/@choerodon/wiki/lib/src/app/wiki/dashboard/*'
-//   },
-//   guide: {
-//     iam: {
-//       components: './node_modules/@choerodon/iam/lib/src/app/iam/guide/*',
-//       locale: './node_modules/@choerodon/iam/lib/src/app/iam/locale/guide/*',
-//     },
-//   },
   emailBlackList: 'qq.com,gmail.com,sina.com,163.com,sina.cn,126.com,yeah.net,189.cn',
   outward: '#/knowledge/share,#/knowledge/preview,#/agile/preview',
 };
