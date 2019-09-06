@@ -23,17 +23,21 @@ ingress:
 
 env:
   open:
-    PRO_API_HOST: gateway.choerodon.example.com
-    PRO_DEVOPS_HOST: devops.choerodon.example.com
-    PRO_AGILE_HOST: devops.choerodon.example.com
-    PRO_CLIENT_ID: choerodon
-    PRO_COOKIE_SERVER: choerodon.example.com
-    PRO_HTTP: http
-    PRO_FILE_SERVER: http://minio.example.com
-    PRO_WEBSOCKET_SERVER: ws://ws.example.com
-    PRO_LOCAL: true
-    PRO_EMAIL_BLACK_LIST: qq.com,gmail.com,sina.com,163.com,sina.cn,126.com,yeah.net,189.cn,foxmail.com,msn.cn,hotmail.com,outlook.com,yahoo.com,139.com
-    PRO_CUSTOM_THEME_COLOR: undefined
+    API_HOST: http://gateway.example.com
+    WEBSOCKET_SERVER: ws://ws.example.com
+    FILE_SERVER: http://minio.example.com
+    AGILE_HOST: http://minio.example.com/agile-service/
+    COOKIE_SERVER: http://choerodon.example.com
+    DEVOPS_HOST: ws://devops.choerodon.example.com
+    BUZZ_WEBSOCKET_URL: ws://buzz.example.com
+    CLIENT_ID: choerodon
+    FEEDBACK_TOKENS:
+      agile: 
+      iam: 
+    HTTP: http
+    LOCAL: false
+    CUSTOM_THEME_COLOR: undefined
+    EMAIL_BLACK_LIST: qq.com,gmail.com,sina.com,163.com,sina.cn,126.com,yeah.net,189.cn,foxmail.com,msn.cn,hotmail.com,outlook.com,yahoo.com,139.com
 
     
 resources: 
