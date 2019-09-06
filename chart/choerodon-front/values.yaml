@@ -26,7 +26,6 @@ env:
     API_HOST: http://gateway.example.com
     WEBSOCKET_SERVER: ws://ws.example.com
     FILE_SERVER: http://minio.example.com
-    AGILE_HOST: http://minio.example.com/agile-service/
     COOKIE_SERVER: http://choerodon.example.com
     DEVOPS_HOST: ws://devops.choerodon.example.com
     BUZZ_WEBSOCKET_URL: ws://buzz.example.com
