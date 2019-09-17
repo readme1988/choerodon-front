@@ -30,7 +30,7 @@ const config = {
   ],
   resourcesLevel: ['site', 'organization', 'project', 'user'],
   emailBlackList: 'qq.com,gmail.com,sina.com,163.com,sina.cn,126.com,yeah.net,189.cn',
-  outward: '#/knowledge/share,#/knowledge/preview,#/agile/preview',
+  outward: '#/knowledge/share,#/agile/preview',
 };
 
 module.exports = config;
