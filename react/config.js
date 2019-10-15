@@ -17,11 +17,11 @@ const config = {
   projectType: 'choerodon',
   master: './node_modules/@choerodon/master/lib/master.js',
   modules: [
-    '@choerodon/base-pro',
+    '@choerodon/base',
     '@choerodon/asgard',
     '@choerodon/notify',
     '@choerodon/manager',
-    "@choerodon/agile-pro",
+    "@choerodon/agile",
     "@choerodon/testmanager",
     "@choerodon/knowledge",
     "@choerodon/devops",
